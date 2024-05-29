@@ -3,7 +3,12 @@ import {
   View
 } from 'react-native';
 // React Navigation
-import { useNavigation } from '@react-navigation/native';
+import {
+  type NavigationProp,
+  useNavigation
+} from '@react-navigation/native';
+// Routes
+import { type RootStackParams } from '../../routes';
 // Components
 import { PrimaryButton } from '../../components';
 // Theme
@@ -11,17 +16,17 @@ import { globalStyles } from '../../theme';
 
 
 export const HomeScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
   return (
     <View style={ globalStyles.container }>
       <PrimaryButton
-        onPress={ () => navigation.navigate( 'Products' as never ) }
+        onPress={ () => navigation.navigate( 'Products' ) }
         label='Productos'
       />
 
       <PrimaryButton
-        onPress={ () => navigation.navigate( 'Settings' as never ) }
+        onPress={ () => navigation.navigate( 'Settings' ) }
         label='Settings'
       />
     </View>
