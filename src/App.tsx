@@ -3,12 +3,14 @@ import {
   Text,
   View
 } from 'react-native';
+// React Native Natigation
+import { NavigationContainer } from '@react-navigation/native';
 
 
 export const App = () => {
   return (
-    <View>
+    <NavigationContainer>
       <Text>App.tsx</Text>
-    </View>
+    </NavigationContainer>
   );
 }
