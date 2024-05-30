@@ -7,13 +7,13 @@ import {
 // React Native Natigation
 import { NavigationContainer } from '@react-navigation/native';
 // Routes
-import { StackNavigator } from './presentation/routes';
+import { SideMenuNavigator } from './presentation/routes';
 
 
 export const App = () => {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <SideMenuNavigator />
     </NavigationContainer>
   );
 }
