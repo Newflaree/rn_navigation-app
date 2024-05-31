@@ -13,7 +13,7 @@ import {
 // Screens
 import { ProfileScreen } from '../screens';
 // Router
-import { StackNavigator } from './StackNavigator';
+import { BottomTabsNavigator } from './';
 // Theme
 import { globalColors } from '../theme';
 
@@ -39,7 +39,7 @@ export const SideMenuNavigator = () => {
         }
       }}
     >
-      <Drawer.Screen name='StackNavigator' component={ StackNavigator } />
+      <Drawer.Screen name='BottomTab' component={ BottomTabsNavigator } />
       <Drawer.Screen name='Profile' component={ ProfileScreen } />
     </Drawer.Navigator>
   );
