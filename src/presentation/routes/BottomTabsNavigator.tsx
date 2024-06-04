@@ -2,6 +2,8 @@
 import { Text } from 'react-native';
 // React Navigator
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// Componets
+import { IonIcon } from '../components';
 // Routers
 import {
   StackNavigator,
@@ -10,8 +12,6 @@ import {
 // Screens
 import {
   Tab1Screen,
-  Tab2Screen,
-  Tab3Screen
 } from '../screens';
 // Theme
 import { globalColors } from '../theme';
@@ -26,6 +26,7 @@ export const BottomTabsNavigator = () => {
         backgroundColor: globalColors.background
       }}
       screenOptions={{
+        tabBarActiveTintColor: globalColors.primary,
         //headerShown: false,
         tabBarLabelStyle: {
           marginBottom: 5
@@ -44,7 +45,7 @@ export const BottomTabsNavigator = () => {
         name='Tab1'
         options={{
           title: 'Tab1',
-          tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab1</Text> )
+          tabBarIcon: ({ color }) => ( <IonIcon name='home-outline' color={ color } /> )
         }}
         component={ Tab1Screen }
       />
@@ -53,7 +54,7 @@ export const BottomTabsNavigator = () => {
         name='Tab2'
         options={{
           title: 'Tab2',
-          tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab2</Text> )
+          tabBarIcon: ({ color }) => ( <IonIcon name='person-outline' color={ color } /> )
         }}
         component={ TopTabsNavigator }
       />
@@ -62,7 +63,7 @@ export const BottomTabsNavigator = () => {
         name='Tab3'
         options={{
           title: 'Tab3',
-          tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab3</Text> )
+          tabBarIcon: ({ color }) => ( <IonIcon name='settings-outline' color={ color } /> )
         }}
         component={ StackNavigator }
       />

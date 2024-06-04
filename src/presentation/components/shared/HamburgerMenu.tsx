@@ -3,13 +3,16 @@ import { useEffect } from 'react';
 // React Native
 import {
   Pressable,
-  Text,
 } from 'react-native';
 // React Navigation
 import {
   DrawerActions,
   useNavigation
 } from '@react-navigation/native';
+// Components
+import { IonIcon } from '../../components';
+// Theme
+import { globalColors } from '../../theme';
 
 
 export const HamburgerMenu = () => {
@@ -18,8 +21,15 @@ export const HamburgerMenu = () => {
   useEffect( () => {
     navigation.setOptions({
       headerLeft: () => (
-        <Pressable onPress={ () => navigation.dispatch( DrawerActions.toggleDrawer() ) }>
-          <Text>Menu</Text>
+        <Pressable
+          style={{ paddingLeft: 10 }}
+          onPress={ () => navigation.dispatch( DrawerActions.toggleDrawer() ) }
+        >
+          <IonIcon
+            name='menu-outline'
+            size={ 30 }
+            color={ globalColors.primary }
+          />
         </Pressable>
       )
     })

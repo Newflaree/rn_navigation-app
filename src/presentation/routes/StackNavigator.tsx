@@ -23,6 +23,8 @@ const Stack = createStackNavigator<RootStackParams>();
 export const StackNavigator = () => {
   return (
     <>
+      <HamburgerMenu />
+
       <Stack.Navigator
         screenOptions={{
           headerShown: false,

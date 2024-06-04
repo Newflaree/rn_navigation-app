@@ -3,10 +3,11 @@ import {
   Text,
   View
 } from 'react-native';
-// React Icons
-import Icon from 'react-native-vector-icons/Ionicons';
 // Components
-import { HamburgerMenu } from '../../components';
+import {
+  HamburgerMenu,
+  IonIcon
+} from '../../components';
 
 
 export const Tab1Screen = () => {
@@ -16,11 +17,12 @@ export const Tab1Screen = () => {
 
       <Text>Tab1Screen</Text>
 
-      <Icon
+      <IonIcon
         name='rocket-outline'
-        size={ 30 }
-        color='#900'
+        size={ 40 }
+        color='black'
       />
+
     </View>
   );
 }

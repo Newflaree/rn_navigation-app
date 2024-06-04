@@ -10,10 +10,12 @@ import {
   DrawerContentScrollView,
   DrawerItemList
 } from '@react-navigation/drawer';
-// Screens
-import { ProfileScreen } from '../screens';
+// Components
+import { IonIcon } from '../components';
 // Router
 import { BottomTabsNavigator } from './';
+// Screens
+import { ProfileScreen } from '../screens';
 // Theme
 import { globalColors } from '../theme';
 
@@ -39,8 +41,16 @@ export const SideMenuNavigator = () => {
         }
       }}
     >
-      <Drawer.Screen name='BottomTab' component={ BottomTabsNavigator } />
-      <Drawer.Screen name='Profile' component={ ProfileScreen } />
+      <Drawer.Screen
+        options={{ drawerIcon: ({ color }) => ( <IonIcon name='accessibility-outline' color={ color } /> ) }}
+        name='BottomTab'
+        component={ BottomTabsNavigator }
+      />
+      <Drawer.Screen
+        options={{ drawerIcon: ({ color }) => ( <IonIcon name='american-football-outline' color={ color } /> ) }}
+        name='Profile'
+        component={ ProfileScreen }
+      />
     </Drawer.Navigator>
   );
 }
